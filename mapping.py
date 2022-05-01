@@ -1,6 +1,6 @@
 ## this script should be run from a directory that includes:
-##		(1) file.csv	export of Primo record
-##		(2) blurb.txt	paragraph about OMC to follow item-level metadata
+##	(1) file.csv, an export of Primo record from lib.washington.edu
+##	(2) blurb.txt, a paragraph about OMC that will go at the bottom of the file
 ## and will create a txt file that can be pasted into the Internet Archive
 ## "description" field.
 
@@ -19,7 +19,7 @@ for row in obj:
 
 full_record = dict(zip(header, data))
 
-# any field from the csv can be listed in this dictionary to be included in the output txt file
+# any column from the Primo csv can be listed in this dictionary to be included in the output txt file
 to_include = ['Title', 'Language','Format', 'Catalog Title', 'Publisher', 'Publication Date', 'Performer or Participant', 'OCLC Number', 'Permalink']
 
 selected_metadata = {}
